@@ -1,5 +1,6 @@
 package card;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class CardDetails implements Cloneable {
@@ -23,7 +24,6 @@ public class CardDetails implements Cloneable {
     }
 
   public  void display() {
-      print.info(
-                "Card holder name : " + ogName + "\nCard number : " + ogCardNo + "\nCard Expiry date : " + ogExpDate);
+      print.log(Level.INFO, () -> ("Card holder name : " + ogName + "\nCard number : " + ogCardNo + "\nCard Expiry date : " + ogExpDate));
     }
 }
